@@ -1,4 +1,4 @@
-package com.example.inventarioGangazo.entity;
+package entity;
 
 import jakarta.persistence.Column;
 import jakarta.persistence.Entity;
@@ -10,19 +10,22 @@ import lombok.Data;
 
 @Entity
 @Data
-@Table(name = "Users")
-public class Users {
+@Table(name = "Products")
+public class Products {
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
     @Column(name = "id")
     private Long id;
 
-    @Column(name = "username")
-    private String username;
+    @Column(name = "nombre")
+    private String nombre;
 
-    @Column(name = "password")
-    private String password;
+    @Column(name = "descripcion")
+    private String descripcion;
 
-    @Column(name = "rol_id")
-    private Long rol_id;
+    @Column(name = "precio")
+    private Double precio;
+
+    @Column(name = "stock")
+    private Integer stock;
 }
